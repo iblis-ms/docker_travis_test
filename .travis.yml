@@ -10,4 +10,4 @@ before_install:
 - docker build -t testimage .
 
 script:
-- docker ps | grep testimage
+- docker run testimage /bin/bash -c "cd /test/app; ./run.sh"
