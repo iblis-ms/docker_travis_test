@@ -1,0 +1,13 @@
+os: linux
+language: c++
+
+sudo: required
+
+services:
+- docker
+
+before_install:
+- docker build -t testimage .
+
+script:
+- docker ps | grep testimage
